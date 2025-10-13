@@ -1,46 +1,4 @@
-import java.util.Scanner;
-import java.time.LocalTime;
-
-class HelpCommand{
-    public static void execute(){
-        System.out.println("Доступные команды:");
-        System.out.println("/help - показать эту справку");
-        System.out.println("/hello - поздороваться");
-        System.out.println("/time - узнать текущее время");
-        System.out.println("/info - информация о боте");
-        System.out.println("/exit - выйти");
-
-
-    }
-}
-
-class HelloCommand{
-    public static void execute(){
-        System.out.println("Привет! Как твои дела?");
-
-    }
-}
-
-class TimeCommand {
-    public static void execute() {
-        System.out.println("Сейчас: " + LocalTime.now());
-    }
-}
-
-class InfoCommand {
-    public static void execute() {
-        System.out.println("Я простой консольный бот на Java");
-        System.out.println("Создан для демонстрации команд");
-    }
-}
-
-class ExitCommand {
-    public static boolean execute() {
-        System.out.println("До свидания!");
-        return true; // сигнал для выхода
-    }
-}
-
+ort java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -50,7 +8,7 @@ public class Main {
 
         while (true) {
             String command = scanner.nextLine().trim();
-            boolean shouldExit=false;
+            boolean shouldExit = false;
 
             switch (command) {
                 case "/help":
